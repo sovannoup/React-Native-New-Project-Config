@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {
-    Text, StyleSheet, TouchableOpacity
+    Text, StyleSheet, TouchableOpacity, View
 } from 'react-native'
 import NavigationService from '../Service/navigationService'
 import { NAV_TYPES } from '../Navigation/navTypes'
@@ -22,12 +22,12 @@ export default class Home extends Component{
    }
     render(){
         return(
-            <>
-                <Text style={{marginTop:100}}>Home</Text>
+            <View style={{height: '100%', justifyContent: 'center'}}>
+                <Text  style={{textAlign:'center'}}>Login</Text>
                 <TouchableOpacity onPress={() => NavigationService.navigate(NAV_TYPES.INTRO)}>
-                    <Text style={{color:'red', fontSize:18}}>Go to Login</Text>
+                    <Text style={{textAlign:'center', color:'green', fontSize:18}}>Click to go home page</Text>
                 </TouchableOpacity>
-            </>
+            </View>
         )
     }
 }
