@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableOpacity, View} from 'react-native';
-import NavigationService from '../Service/navigationService';
-import {NAV_TYPES} from '../Navigation/navTypes';
-export default class Home extends Component {
+import NavigationService from '../../Service/navigationService';
+import {NAV_TYPES} from '../../Navigation/navTypes';
+export default class Explore extends Component {
   constructor(prop) {
     super(prop);
     this.state = {};

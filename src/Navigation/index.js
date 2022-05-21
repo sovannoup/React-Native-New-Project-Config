@@ -12,7 +12,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {NAV_TYPES} from './navTypes';
 import screenLogin from '../Containers/LoginContainer';
-import screenHome from '../Containers/HomeContainer';
+import screenHome from '../Containers/ExploreContainer';
 
 const IntroNavigator = createStackNavigator(
   {

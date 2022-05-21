@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableOpacity, View} from 'react-native';
-import NavigationService from '../Service/navigationService';
-import {NAV_TYPES} from '../Navigation/navTypes';
+import NavigationService from '../../Service/navigationService';
+import {NAV_TYPES} from '../../Navigation/navTypes';
+import {Input} from '../../Components/Customize';
 import tw from 'twrnc';
 import auth from '@react-native-firebase/auth';
 
@@ -16,7 +17,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={{height: '100%', justifyContent: 'center'}}>
-        <Text style={{textAlign: 'center'}}>Login</Text>
+        <Input />
         <TouchableOpacity
           onPress={() => NavigationService.navigate(NAV_TYPES.CORE)}>
           <Text style={{textAlign: 'center', color: 'green', fontSize: 18}}>
