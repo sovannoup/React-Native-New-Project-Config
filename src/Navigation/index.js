@@ -1,5 +1,12 @@
-import React from 'react'
-import {View,Image,StyleSheet,Text,Platform,TouchableOpacity} from 'react-native'
+import React from 'react';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Text,
+  Platform,
+  TouchableOpacity,
+} from 'react-native';
 import {createAppContainer} from 'react-navigation'
 import {createStackNavigator} from 'react-navigation-stack'
 import {createBottomTabNavigator} from 'react-navigation-tabs'
@@ -12,13 +19,12 @@ const IntroNavigator = createStackNavigator(
         [NAV_TYPES.LOGIN]:{
             screen:screenLogin,
             navigationOptions:{
-                headerShown:false
-            },
+                headerShown:false,
+      },
         },
-  
-    },
+  },
     {
-        initialRouteName:NAV_TYPES.LOGIN
+        initialRouteName:NAV_TYPES.LOGIN,
     }
     )
 
@@ -42,7 +48,7 @@ const TabNavigation = createBottomTabNavigator(
             screen:HomeNavigation,
             navigationOptions:{
                 tabBarLabel:({focused})=>(
-                    <Text style={{textAlign:'center',color:focused?'#c43e00':'black'}}>ទំព័រដើម</Text>
+                    <Text style={{textAlign:'center',color:focused ? '#c43e00':'black'}}>ទំព័រដើម</Text>
                 ),
             }
         },
@@ -56,7 +62,7 @@ const TabNavigation = createBottomTabNavigator(
           labelStyle: {
             fontSize: 20,
           },
-          style:{height:Platform.OS==='ios'?60:63,paddingBottom:Platform.OS==='ios' ? 0 : 10},
+          style:{height:Platform.OS === 'ios' ? 60:63,paddingBottom:Platform.OS === 'ios' ? 0 : 10},
           activeColor:'blue',
         activeTabStyle:{backgroundColor:'blue'},
         

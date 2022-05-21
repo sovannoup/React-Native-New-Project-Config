@@ -23,10 +23,7 @@ export default class Home extends Component{
     render(){
         return(
             <View style={{height: '100%', justifyContent: 'center'}}>
-                <Text  style={{textAlign:'center'}}>Login</Text>
-                <TouchableOpacity onPress={() => NavigationService.navigate(NAV_TYPES.INTRO)}>
-                    <Text style={{textAlign:'center', color:'green', fontSize:18}}>Click to go home page</Text>
-                </TouchableOpacity>
+                <Text style={{textAlign:'center'}}>Login</Text>
             </View>
         )
     }
