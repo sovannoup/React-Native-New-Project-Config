@@ -1,12 +1,9 @@
-import { all } from "redux-saga/effects";
-import {appSaga} from "../Modules/app";
-import {homeSaga} from "../Modules/home"
+import {all} from 'redux-saga/effects';
+import {appSaga} from '../Modules/app';
+import {homeSaga} from '../Modules/home';
 
-const sagas = [
-  appSaga(),
-  homeSaga()
-];
+const sagas = [appSaga(), homeSaga()];
 
-export default function*() {
+export default function* () {
   yield all(sagas);
 }

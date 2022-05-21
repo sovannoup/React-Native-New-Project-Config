@@ -70,40 +70,40 @@ const TabNavigation = createBottomTabNavigator(
         tabBarLabel: ({focused}) => (
           <Text
             style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            ទំព័រដើម
+            Explore
           </Text>
         ),
       },
     },
-    [NAV_TYPES.EXPLORE]: {
+    [NAV_TYPES.LEDGER]: {
       screen: LedgerNavigation,
       navigationOptions: {
         tabBarLabel: ({focused}) => (
           <Text
             style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            ទំព័រដើម
+            Ledger
           </Text>
         ),
       },
     },
-    [NAV_TYPES.EXPLORE]: {
+    [NAV_TYPES.FAV]: {
       screen: FavNavigation,
       navigationOptions: {
         tabBarLabel: ({focused}) => (
           <Text
             style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            ទំព័រដើម
+            Favorite
           </Text>
         ),
       },
     },
-    [NAV_TYPES.EXPLORE]: {
+    [NAV_TYPES.PROFILE]: {
       screen: ProfileNavigation,
       navigationOptions: {
         tabBarLabel: ({focused}) => (
           <Text
             style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            ទំព័រដើម
+            Profile
           </Text>
         ),
       },

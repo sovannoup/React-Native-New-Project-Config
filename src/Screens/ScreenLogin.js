@@ -3,6 +3,7 @@ import {Text, StyleSheet, TouchableOpacity, View} from 'react-native';
 import NavigationService from '../Service/navigationService';
 import {NAV_TYPES} from '../Navigation/navTypes';
 import tw from 'twrnc';
+import auth from '@react-native-firebase/auth';
 
 export default class Login extends Component {
   constructor(prop) {
