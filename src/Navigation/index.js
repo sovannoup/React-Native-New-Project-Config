@@ -12,7 +12,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {NAV_TYPES} from './navTypes';
 import screenLogin from '../Containers/LoginContainer';
-import screenHome from '../Containers/ExploreContainer';
+import screenHome from '../Containers/HomeContainer';
 
 const IntroNavigator = createStackNavigator(
   {
@@ -28,32 +28,8 @@ const IntroNavigator = createStackNavigator(
   },
 );
 
-const ExploreNavigation = createStackNavigator({
-  [NAV_TYPES.MAIN_EXPLORE]: {
-    screen: screenHome,
-    navigationOptions: {
-      headerShown: false,
-    },
-  },
-});
-const LedgerNavigation = createStackNavigator({
-  [NAV_TYPES.MAIN_LEDGER]: {
-    screen: screenHome,
-    navigationOptions: {
-      headerShown: false,
-    },
-  },
-});
-const FavNavigation = createStackNavigator({
-  [NAV_TYPES.MAIN_FAV]: {
-    screen: screenHome,
-    navigationOptions: {
-      headerShown: false,
-    },
-  },
-});
-const ProfileNavigation = createStackNavigator({
-  [NAV_TYPES.MAIN_PROFILE]: {
+const HomeNavigation = createStackNavigator({
+  [NAV_TYPES.MAIN_HOME]: {
     screen: screenHome,
     navigationOptions: {
       headerShown: false,
@@ -64,46 +40,13 @@ const ProfileNavigation = createStackNavigator({
 //Tab Navigation
 const TabNavigation = createBottomTabNavigator(
   {
-    [NAV_TYPES.EXPLORE]: {
-      screen: ExploreNavigation,
+    [NAV_TYPES.HOME]: {
+      screen: HomeNavigation,
       navigationOptions: {
         tabBarLabel: ({focused}) => (
           <Text
             style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            Explore
-          </Text>
-        ),
-      },
-    },
-    [NAV_TYPES.LEDGER]: {
-      screen: LedgerNavigation,
-      navigationOptions: {
-        tabBarLabel: ({focused}) => (
-          <Text
-            style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            Ledger
-          </Text>
-        ),
-      },
-    },
-    [NAV_TYPES.FAV]: {
-      screen: FavNavigation,
-      navigationOptions: {
-        tabBarLabel: ({focused}) => (
-          <Text
-            style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            Favorite
-          </Text>
-        ),
-      },
-    },
-    [NAV_TYPES.PROFILE]: {
-      screen: ProfileNavigation,
-      navigationOptions: {
-        tabBarLabel: ({focused}) => (
-          <Text
-            style={{textAlign: 'center', color: focused ? '#c43e00' : 'black'}}>
-            Profile
+            ទំព័រដើម
           </Text>
         ),
       },
